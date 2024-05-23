@@ -20,7 +20,5 @@ function parseNumericEnv(envVal) {
     return envVal === undefined ? envVal : Number(envVal);
 }
 function parseBooleanEnv(envVal) {
-    return envVal === undefined
-        ? envVal
-        : process.env.headless === 'true' || process.env.headless === '1';
+    return envVal === undefined ? envVal : envVal === 'true' || envVal === '1';
 }
